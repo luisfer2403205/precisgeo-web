@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="PrecisGeo Consultoría SAS: Soluciones geoespaciales de alta precisión en topografía, GIS, vuelos UAS, agricultura de precisión y SG-SST para el sector palmero en el Magdalena Medio, Colombia."/>
+  <meta name="keywords" content="topografía RTK, GIS, drones, fotogrametría, palma de aceite, RSPO, SG-SST, CENIPALMA, Barrancabermeja"/>
+  <meta name="author" content="PrecisGeo Consultoría SAS"/>
+  <meta name="geo.region" content="CO-SAN"/>
+  <meta name="geo.placename" content="Barrancabermeja"/>
+  <title>PrecisGeo Consultoría | Topografía · GIS · UAS · Sostenibilidad · SG-SST</title>
+  
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:title" content="PrecisGeo Consultoría | Precisión desde el aire"/>
+  <meta property="og:description" content="Soluciones geoespaciales integrales para agroindustria, SG-SST y gestión territorial sostenible."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="es_CO"/>
+  <meta property="og:image" content="https://precisgeo.com.co/assets/logo-precisgeo.png"/>
+  
+  <!-- Fuentes e Iconos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "PrecisGeo Consultoría SAS",
+    "image": "https://precisgeo.com.co/assets/logo-precisgeo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Barrancabermeja",
+      "addressRegion": "Santander",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "7.0654",
+      "longitude": "-73.8547"
+    },
+    "telephone": "+57-310-312-1380",
+    "email": "info@precisgeo.com.co",
+    "url": "https://precisgeo.com.co",
+    "areaServed": "Magdalena Medio, Colombia",
+    "makesOffer": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Topografía RTK"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sistemas de Información Geográfica"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vuelos UAS y Fotogrametría"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Agricultura de Precisión"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Certificaciones RSPO"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Asesoría SG-SST"}}
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --color-primary:#0F2C4C;
+      --color-secondary:#2E7D32;
+      --color-accent:#1976D2;
+      --color-light:#F5F7FA;
+      --color-dark:#1A1A2E;
+      --color-text:#333;
+      --color-text-light:#666;
+      --shadow:0 4px 20px rgba(0,0,0,0.08);
+      --radius:12px;
+      --transition:all 0.3s ease;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Inter',system-ui,-apple-system,sans-serif;
+      line-height:1.6;color:var(--color-text);
+      background:#fff;
+    }
+    .container{max-width:1200px;margin:0 auto;padding:0 2rem}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;height:auto;display:block}
+    
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:1000;
+      background:rgba(255,255,255,0.98);
+      backdrop-filter:blur(10px);
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:0.75rem 0;
+    }
+    .logo{
+      display:flex;align-items:center;gap:0;
+    }
+    .logo img{
+      height:150px;
+      width:auto;
+      object-fit:contain;
+    }
+    .nav-links{
+      display:flex;gap:1.75rem;list-style:none;align-items:center;
+    }
+    .nav-links a{
+      font-weight:500;font-size:0.95rem;color:var(--color-primary);
+      transition:var(--transition);
+      padding:0.5rem 0;
+      position:relative;
+    }
+    .nav-links a:hover,
+    .nav-links a.active{color:var(--color-secondary)}
+    .nav-links a::after{
+      content:'';position:absolute;bottom:0;left:0;
+      width:0;height:2px;background:var(--color-secondary);
+      transition:var(--transition);
+    }
+    .nav-links a:hover::after{width:100%}
+    .btn{
+      display:inline-flex;align-items:center;gap:0.5rem;
+      padding:0.7rem 1.4rem;border-radius:8px;
+      font-weight:600;font-size:0.95rem;cursor:pointer;transition:var(--transition);
+      border:2px solid transparent;
+    }
+    .btn-primary{
+      background:var(--color-secondary);color:#fff;
+    }
+    .btn-primary:hover{
+      background:#1B5E20;transform:translateY(-2px);
+      box-shadow:0 8px 25px rgba(46,125,50,0.3);
+    }
+    .btn-outline{
+      border-color:var(--color-primary);color:var(--color-primary);
+    }
+    .btn-outline:hover{
+      background:var(--color-primary);color:#fff;
+    }
+    .mobile-toggle{display:none;font-size:1.5rem;cursor:pointer;color:var(--color-primary)}
+    
+    /* Hero */
+    .hero{
+      background:linear-gradient(135deg,var(--color-primary) 0%, #1A4A7A 100%);
+      color:#fff;padding:6rem 0 5rem;position:relative;overflow:hidden;
+    }
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon fill='rgba(255,255,255,0.03)' points='0,100 100,0 100,100'/%3E%3C/svg%3E");
+      background-size:cover;
+    }
+    .hero-content{
+      position:relative;z-index:1;max-width:750px;
+    }
+    .hero h1{
+      font-size:3rem;font-weight:700;line-height:1.15;margin-bottom:1.5rem;
+    }
+    .hero p{
+      font-size:1.25rem;opacity:0.95;margin-bottom:2rem;line-height:1.7;
+    }
+    .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+    .trust-badges{
+      display:flex;gap:1.5rem;margin-top:3.5rem;flex-wrap:wrap;
+    }
+    .badge{
+      display:flex;align-items:center;gap:0.5rem;
+      font-size:0.9rem;opacity:0.95;
+    }
+    .badge i{color:#4CAF50;font-size:1.1rem}
+    
+    /* Secciones */
+    section{padding:5rem 0}
+    .section-header{
+      text-align:center;max-width:750px;margin:0 auto 3rem;
+    }
+    .section-header h2{
+      font-size:2.2rem;color:var(--color-primary);margin-bottom:1rem;
+    }
+    .section-header p{color:var(--color-text-light);font-size:1.1rem}
+    
+    /* Servicios Grid */
+    .services-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:2rem;
+    }
+    .service-card{
+      background:var(--color-light);border-radius:var(--radius);
+      padding:2.25rem;transition:var(--transition);
+      border:1px solid #eee;
+    }
+    .service-card:hover{
+      transform:translateY(-6px);box-shadow:var(--shadow);
+      border-color:var(--color-secondary);
+    }
+    .service-icon{
+      width:55px;height:55px;border-radius:12px;
+      background:linear-gradient(135deg,var(--color-primary),var(--color-secondary));
+      color:#fff;
+      display:flex;align-items:center;justify-content:center;
+      font-size:1.4rem;margin-bottom:1.25rem;
+    }
+    .service-card h3{
+      font-size:1.35rem;margin-bottom:0.75rem;color:var(--color-primary);
+    }
+    .service-card p{color:var(--color-text-light);margin-bottom:1rem;line-height:1.6}
+    .tags{display:flex;gap:0.5rem;flex-wrap:wrap}
+    .tag{
+      font-size:0.75rem;padding:0.3rem 0.8rem;
+      background:#fff;border:1px solid #ddd;border-radius:20px;
+      color:var(--color-primary);font-weight:500;
+    }
+    
+    /* Nosotros */
+    .about{background:var(--color-light)}
+    .about-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;
+    }
+    .about-content h3{
+      font-size:1.5rem;color:var(--color-primary);margin-bottom:1rem;
+    }
+    .values-grid{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;
+    }
+    .value-item{text-align:center;padding:1.5rem 1rem;background:#fff;border-radius:var(--radius)}
+    .value-item i{
+      font-size:2rem;color:var(--color-secondary);margin-bottom:0.75rem;
+    }
+    .value-item h4{font-weight:600;margin-bottom:0.25rem;color:var(--color-primary)}
+    .value-item p{font-size:0.9rem;color:var(--color-text-light)}
+    
+    /* Equipo */
+    .team-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:2rem;margin-top:2rem;
+    }
+    .team-card{
+      text-align:center;padding:2.5rem 2rem;background:#fff;
+      border-radius:var(--radius);box-shadow:var(--shadow);
+      border-top:3px solid var(--color-secondary);
+    }
+    .team-avatar{
+      width:85px;height:85px;border-radius:50%;
+      background:linear-gradient(135deg,var(--color-primary),var(--color-secondary));
+      color:#fff;
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;font-size:1.3rem;margin:0 auto 1.25rem;
+    }
+    .team-card h4{color:var(--color-primary);margin-bottom:0.25rem;font-size:1.1rem}
+    .team-card p{font-size:0.9rem;color:var(--color-text-light)}
+    
+    /* Tecnologías */
+    .tech-list{
+      display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;
+    }
+    .tech-item{
+      padding:0.85rem 1.75rem;background:var(--color-light);
+      border-radius:8px;font-weight:500;color:var(--color-primary);
+      border:1px solid #e0e0e0;transition:var(--transition);
+    }
+    .tech-item:hover{
+      border-color:var(--color-secondary);
+      background:#fff;
+      box-shadow:var(--shadow);
+    }
+    
+    /* Contacto */
+    .contact-grid{
+      display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;
+    }
+    .contact-info div{
+      display:flex;align-items:flex-start;gap:1rem;
+      margin-bottom:1.5rem;padding:1.25rem;
+      background:var(--color-light);border-radius:var(--radius);
+    }
+    .contact-info i{
+      font-size:1.3rem;color:var(--color-secondary);margin-top:0.25rem;
+      min-width:24px;
+    }
+    .contact-info strong{display:block;color:var(--color-primary);margin-bottom:0.25rem}
+    .contact-info a{color:var(--color-secondary);transition:var(--transition)}
+    .contact-info a:hover{color:var(--color-primary)}
+    .social-links{display:flex;gap:0.75rem;margin-top:0.5rem}
+    .social-links a{
+      width:42px;height:42px;border-radius:50%;
+      background:var(--color-primary);color:#fff;
+      display:flex;align-items:center;justify-content:center;
+      transition:var(--transition);font-size:1.1rem;
+    }
+    .social-links a:hover{transform:translateY(-3px);background:var(--color-secondary)}
+    
+    form{
+      display:flex;flex-direction:column;gap:1.25rem;
+      background:#fff;padding:2.5rem;border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .form-group label{
+      display:block;font-weight:500;margin-bottom:0.5rem;
+      color:var(--color-primary);font-size:0.95rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select{
+      width:100%;padding:0.9rem 1rem;border:1px solid #ddd;
+      border-radius:8px;font-family:inherit;font-size:1rem;
+      transition:var(--transition);background:var(--color-light);
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus{
+      outline:none;border-color:var(--color-secondary);
+      box-shadow:0 0 0 3px rgba(46,125,50,0.1);
+      background:#fff;
+    }
+    .checkbox-group{
+      display:flex;align-items:flex-start;gap:0.5rem;
+      font-size:0.85rem;color:var(--color-text-light);
+    }
+    .checkbox-group input{margin-top:0.25rem;accent-color:var(--color-secondary)}
+    
+    /* Footer */
+    footer{
+      background:var(--color-dark);color:#fff;padding:3.5rem 0 1.5rem;
+      font-size:0.9rem;
+    }
+    .footer-grid{
+      display:grid;grid-template-columns:2fr 1fr 1fr;gap:2.5rem;
+      margin-bottom:2.5rem;
+    }
+    .footer-col h4{
+      font-size:1.1rem;margin-bottom:1.25rem;color:#fff;
+    }
+    .footer-col a{
+      display:block;color:#bbb;margin-bottom:0.6rem;
+      transition:var(--transition);
+    }
+    .footer-col a:hover{color:#fff;padding-left:5px}
+    .footer-bottom{
+      text-align:center;padding-top:1.5rem;
+      border-top:1px solid rgba(255,255,255,0.1);
+      color:#888;
+    }
+    
+    /* Responsive */
+    @media(max-width:900px){
+      .about-grid,.contact-grid{grid-template-columns:1fr}
+      .values-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .hero h1{font-size:2.4rem}
+    }
+    @media(max-width:768px){
+      .nav-links{
+        position:fixed;top:70px;left:0;right:0;
+        background:#fff;flex-direction:column;
+        padding:2rem;gap:1.5rem;box-shadow:0 10px 30px rgba(0,0,0,0.1);
+        transform:translateY(-150%);transition:var(--transition);
+      }
+      .nav-links.active{transform:translateY(0)}
+      .mobile-toggle{display:block}
+      .hero h1{font-size:2rem}
+      .hero{padding:4rem 0 3.5rem}
+      .values-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .logo img{height:45px}
+      form{padding:1.5rem}
+    }
+    
+    /* Utilidades */
+    .text-center{text-align:center}
+    .mt-2{margin-top:2rem}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">
+        <img src="assets/logo-precisgeo.png" alt="PrecisGeo Consultoría SAS - Agronomía, Sostenibilidad, Topografía">
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#tecnologias">Tecnologías</a></li>
+          <li><a href="#contacto" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Cotizar</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Precisión desde el aire.<br>Claridad en el terreno.</h1>
+        <p>Soluciones geoespaciales integrales para la agroindustria, infraestructura y gestión territorial sostenible en el Magdalena Medio.</p>
+        <div class="hero-ctas">
+          <a href="#servicios" class="btn btn-primary"><i class="fas fa-chevron-right"></i> Ver servicios</a>
+          <a href="#contacto" class="btn btn-outline" style="border-color:#fff;color:#fff"><i class="fas fa-comment-alt"></i> Hablar con un experto</a>
+        </div>
+        <div class="trust-badges">
+          <div class="badge"><i class="fas fa-check-circle"></i> Certificación RSPO</div>
+          <div class="badge"><i class="fas fa-shield-alt"></i> Asesoría SG-SST</div>
+          <div class="badge"><i class="fas fa-drone"></i> Operación RAC-UAS</div>
+          <div class="badge"><i class="fas fa-ruler-combined"></i> GNSS RTK centimétrico</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <h2>Servicios especializados de alta precisión</h2>
+        <p>Integramos tecnología geoespacial de vanguardia con conocimiento agronómico profundo del cultivo de palma de aceite.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-satellite-dish"></i></div>
+          <h3>Topografía y levantamientos RTK</h3>
+          <p>Levantamientos planimétricos y altimétricos con equipos GNSS RTK de alta precisión, georreferenciación MAGNA-SIRGAS, replanteos y trazados de obras.</p>
+          <div class="tags"><span class="tag">GNSS</span><span class="tag">MAGNA-SIRGAS</span><span class="tag">LandXML</span></div>
+        </article>
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
+          <h3>Sistemas de información geográfica</h3>
+          <p>Diseño de geodatabases, cartografía temática, análisis espacial, modelamiento hidrológico y gestión de datos geográficos en ArcGIS Pro y QGIS.</p>
+          <div class="tags"><span class="tag">ArcGIS Pro</span><span class="tag">QGIS</span><span class="tag">ArcPy</span></div>
+        </article>
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-helicopter"></i></div>
+          <h3>Vuelos UAS y fotogrametría aérea</h3>
+          <p>Levantamientos fotogramétricos con drones DJI de última generación, generación de ortomosaicos, MDT/MDS, nubes de puntos y modelos 3D georreferenciados.</p>
+          <div class="tags"><span class="tag">DJI Matrice</span><span class="tag">Ortomosaico</span><span class="tag">Nube LiDAR</span></div>
+        </article>
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Agricultura de precisión</h3>
+          <p>Monitoreo y análisis espacial de cultivos de palma de aceite, mapas de variabilidad, protocolos de muestreo georreferenciado y análisis por zonas de manejo.</p>
+          <div class="tags"><span class="tag">Palma de aceite</span><span class="tag">CENIPALMA</span><span class="tag">Sensores</span></div>
+        </article>
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-leaf"></i></div>
+          <h3>Sostenibilidad y certificaciones</h3>
+          <p>Acompañamiento en procesos de certificación RSPO, elaboración de planes de manejo ambiental, trazabilidad de productores y cumplimiento de P&C 2018.</p>
+          <div class="tags"><span class="tag">RSPO</span><span class="tag">MIPE</span><span class="tag">Trazabilidad</span></div>
+        </article>
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
+          <h3>Diseño de infraestructura agrícola</h3>
+          <p>Diseño de redes de canales de drenaje y riego, cálculos hidráulicos con criterios CENIPALMA, perfiles de vías internas y obras de adecuación de tierras.</p>
+          <div class="tags"><span class="tag">Manning</span><span class="tag">Drenaje</span><span class="tag">CENIPALMA</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section id="nosotros" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2>Expertos en el territorio del Magdalena Medio</h2>
+          <p><strong>PrecisGeo Consultoría SAS</strong> es una empresa colombiana con sede en Barrancabermeja, Santander, especializada en la integración de tecnologías geoespaciales para el sector agropecuario y la gestión sostenible del territorio.</p>
+          <p class="mt-2">Nuestro equipo combina experiencia técnica en topografía, GIS y operación UAS con un profundo conocimiento del cultivo de palma de aceite y los estándares de sostenibilidad del sector palmero colombiano.</p>
+          <p class="mt-2">Operamos bajo la reglamentación <strong>UAEAC/RAC-UAS</strong> y los estándares <strong>RSPO</strong>, ofreciendo soluciones integrales que van desde el vuelo hasta el análisis de datos y la toma de decisiones.</p>
+          
+          <div class="values-grid">
+            <div class="value-item">
+              <i class="fas fa-bullseye"></i>
+              <h4>Precisión</h4>
+              <p>Datos confiables con equipos de última generación</p>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-leaf"></i>
+              <h4>Sostenibilidad</h4>
+              <p>Producción responsable y certificación RSPO</p>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-lightbulb"></i>
+              <h4>Innovación</h4>
+              <p>Tecnología UAS, GIS y análisis integrados</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 style="margin-bottom:1.5rem;color:var(--color-primary);font-size:1.4rem">Nuestro equipo directivo</h3>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-avatar">LB</div>
+              <h4>Luis Fernando Buitrago</h4>
+              <p>Director de Operaciones</p>
+              <p style="font-size:0.85rem;color:var(--color-secondary);margin-top:0.5rem">Operador UAS certificado RAC-UAS</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar">DC</div>
+              <h4>Dayana Chacón Moncada</h4>
+              <p>Directora de Sostenibilidad & SG-SST</p>
+              <p style="font-size:0.85rem;color:var(--color-secondary);margin-top:0.5rem">Asesora en Sistemas de Gestión de SST y Auditorías RSPO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tecnologías -->
+  <section id="tecnologias">
+    <div class="container text-center">
+      <div class="section-header">
+        <h2>Tecnologías que manejamos</h2>
+        <p>Herramientas profesionales que respaldan cada proyecto</p>
+      </div>
+      <div class="tech-list">
+        <span class="tech-item">ArcGIS Pro</span>
+        <span class="tech-item">QGIS</span>
+        <span class="tech-item">DJI Matrice 4E</span>
+        <span class="tech-item">Stonex RTK</span>
+        <span class="tech-item">Power BI</span>
+        <span class="tech-item">Survey123</span>
+        <span class="tech-item">PostgreSQL</span>
+        <span class="tech-item">Python / ArcPy</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" style="background:var(--color-light)">
+    <div class="container">
+      <div class="section-header">
+        <h2>¿Tienes un proyecto en mente?</h2>
+        <p>Estamos en Barrancabermeja, Santander, listos para atenderte. Contáctanos por cualquiera de estos medios.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div>
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Ubicación</strong>
+              Barrancabermeja, Santander, Colombia
+            </div>
+          </div>
+          <div>
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <strong>Teléfonos / WhatsApp</strong>
+              <a href="https://wa.me/573103121380" target="_blank">+57 310 312 1380</a><br/>
+              <a href="https://wa.me/573214518144" target="_blank">+57 321 451 8144</a>
+            </div>
+          </div>
+          <div>
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Correo corporativo</strong>
+              <a href="mailto:info@precisgeo.com.co">info@precisgeo.com.co</a>
+            </div>
+          </div>
+          <div>
+            <i class="fas fa-share-alt"></i>
+            <div>
+              <strong>Redes sociales</strong>
+              <div class="social-links">
+                <a href="https://facebook.com/PrecisGeoConsultoria" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/PrecisGeoConsultoria" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/PrecisGeoConsultoria" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form action="https://formspree.io/f/tu-id-aqui" method="POST">
+          <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" required/>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" required/>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono"/>
+          </div>
+          <div class="form-group">
+            <label for="servicio">Tipo de proyecto</label>
+            <select id="servicio" name="servicio">
+              <option value="">Seleccione una opción</option>
+              <option value="topografia">Topografía / RTK</option>
+              <option value="gis">GIS / Análisis espacial</option>
+              <option value="uas">Vuelos UAS / Fotogrametría</option>
+              <option value="agricultura">Agricultura de precisión</option>
+              <option value="rsppo-sst">Certificación RSPO / SG-SST</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="habeas" name="habeas" required/>
+            <label for="habeas">Acepto la <a href="#" target="_blank">Política de Tratamiento de Datos</a> y autorizo el contacto comercial.</label>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:fit-content"><i class="fas fa-paper-plane"></i> Enviar solicitud</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>PrecisGeo Consultoría SAS</h4>
+          <p style="color:#bbb;line-height:1.7">Soluciones geoespaciales de alta precisión para la agroindustria, gestión de SST y sostenibilidad en el Magdalena Medio colombiano.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Enlaces</h4>
+          <a href="#servicios">Servicios</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#tecnologias">Tecnologías</a>
+          <a href="#contacto">Contáctanos</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="politica-datos.html">Política de privacidad</a>
+          <a href="politica-datos.html">Tratamiento de datos (Habeas Data)</a>
+          <a href="#">Términos de servicio</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 PrecisGeo Consultoría SAS. Todos los derechos reservados. | NIT en trámite | Barrancabermeja, Santander, Colombia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Toggle menú móvil
+    document.getElementById('mobileToggle').addEventListener('click', function(){
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+    
+    // Cerrar menú al hacer click en enlace (móvil)
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('active');
+      });
+    });
+    
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+    
+    // Validación formulario
+    document.querySelector('form')?.addEventListener('submit', function(e){
+      const checkbox = document.getElementById('habeas');
+      if(!checkbox.checked){
+        e.preventDefault();
+        alert('Para continuar, debe aceptar la Política de Tratamiento de Datos.');
+        checkbox.focus();
+      }
+    });
+  </script>
+</body>
+</html>
